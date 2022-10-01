@@ -1,0 +1,5 @@
+- lock links
+- aes encryption 
+- aes hash to link slug
+- password protect
+- if hash matches then return link
