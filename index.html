@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>URL LOCKER🔒</title>
 </head>
 <body>
-    <div class="lock_div" id="lock-div-id">
-        <input type="url" id="url" placeholder="enter url">
-        <input type="text" id="url_key" placeholder="key">
-        <button id="lock_btn">lock url</button>
-        <p id="locked_url"></p>
+    <p class="heading">URL LOCKER🔒</p>
+<div class="main-div">
+    <div class="lock_div" id="lock_div_id">
+        <p>URL🔗</p>
+        <input id="url" placeholder="example.com">
+        <p>KEY🔑</p>
+        <input id="url_key" placeholder="@Abc123">
+        <button id="lock_btn">Lock URL</button>
     </div>
-    
-    <div class="unlock-div" id="unlock-div-id">
-        <input type="text" id="lurl_key" placeholder="key">
-        <button id="unlock_btn">unlock url</button>
+    <div class="url_display" id="url_display_id">
+        <textarea id="locked_url" cols="40" rows="4" readonly></textarea>
+        <button id="copy_btn">Copy URL</button>
     </div>
-    
-
+</div>
+<div class="main-div2">
+    <div class="unlock_div" id="unlock_div_id">
+        <p>KEY🔑</p>
+        <input type="text" id="lurl_key" placeholder="@Abc123">
+        <button id="unlock_btn">Unlock</button>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
