@@ -8,7 +8,7 @@ document.getElementById("lock_btn").addEventListener("click", encrypt, false);
 
 function encrypt(){
     if(url.value == '' || url_key.value == ''){
-        alert('URL & Key should not be empty!!!')
+        alert('URL / KEY should not be empty!!!')
     }
     else{
     var EncryptED = CryptoJS.AES.encrypt(url.value, url_key.value);
@@ -72,11 +72,11 @@ function unlock(){
                 console.log(unlocked_url)
                 window.location.replace("http://"+unlocked_url);
             } else {
-                alert("URL or Key is incorrect!!!");
+                alert("URL / KEY is incorrect!!!");
             }
         }
         catch(e){
-            alert("URL or Key is incorrect!!!");
+            alert("URL / KEY is incorrect!!!");
         }
     }
 }
