@@ -8,7 +8,7 @@ document.getElementById("lock_btn").addEventListener("click", encrypt, false);
 
 function encrypt(){
     if(url.value == '' || url_key.value == ''){
-        alert('URL / KEY should not be empty!!!')
+        alert('URL or KEY should not be empty!')
     }
     else{
     var EncryptED = CryptoJS.AES.encrypt(url.value, url_key.value);
@@ -20,14 +20,9 @@ function encrypt(){
     document.getElementById("copy_btn").addEventListener("click", copy, false);
     function copy(){
         var copyText = document.getElementById("locked_url");
-        if(copyText.value == ''){
-            alert("Nothing to Copy!!!")
-        }
-        else{
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            document.execCommand("copy");
-        }
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
     }
     }
 }
@@ -70,11 +65,11 @@ function unlock(){
                 console.log(unlocked_url)
                 window.location.replace("http://"+unlocked_url);
             } else {
-                alert("URL / KEY is incorrect!!!");
+                alert("URL or KEY is incorrect!");
             }
         }
         catch(e){
-            alert("URL / KEY is incorrect!!!");
+            alert("URL or KEY is incorrect!");
         }
     }
 }
