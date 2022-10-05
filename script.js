@@ -63,7 +63,7 @@ function unlock(){
             if (DecryptED.toString(CryptoJS.enc.Utf8).length > 0) {
                 var unlocked_url = DecryptED.toString(CryptoJS.enc.Utf8);
                 console.log(unlocked_url)
-                window.location.replace("http://"+unlocked_url);
+                window.location.replace(unlocked_url);
             } else {
                 alert("URL or KEY is incorrect!");
             }
