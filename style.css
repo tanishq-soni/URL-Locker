@@ -50,6 +50,18 @@ body{
     margin-bottom: 7px;
     margin-top: 0;
 }
+#lurl_qr{
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    
+}
 textarea{
     width: 300px;
     border: 1px solid black;

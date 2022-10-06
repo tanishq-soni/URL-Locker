@@ -22,8 +22,9 @@ function encrypt(){
         var copyText = document.getElementById("locked_url");
         copyText.select();
         copyText.setSelectionRange(0, 99999);
-        document.execCommand("copy");
+        navigator.clipboard.writeText(copyText.value);
     }
+    document.getElementById("lurl_qr").src="https://api.qrserver.com/v1/create-qr-code/?data="+locked_url;
     }
 }
 
